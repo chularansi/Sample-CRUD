@@ -8,12 +8,20 @@ app.use(cors());
 app.use(express.json());
 
 const db = mysql.createConnection({
-  user: 'root',
-  host: 'localhost',
+  user: 'admin',
+  host: 'my-mysql2.c2e9p78awyp5.us-east-1.rds.amazonaws.com',
   port: 3306,
-  password: '',
-  database: 'employeedb'
+  password: 'admin_1234',
+  database: 'EmployeeDB'
 });
+
+// const db = mysql.createConnection({
+//   user: 'root',
+//   host: 'localhost',
+//   port: 3306,
+//   password: '',
+//   database: 'employeedb'
+// });
 
 // Serve static files
 app.use(express.static(path.join(__dirname, 'client', 'build')));
@@ -82,6 +90,6 @@ app.delete('/delete/:id', (req,res) => {
 //   res.sendFile(path.join(__dirname, "client/build", "index.html"));
 // })
 
-app.listen(3001, () => {
+app.listen(3100, () => {
   console.log('Server is running on port 3100');
 })
