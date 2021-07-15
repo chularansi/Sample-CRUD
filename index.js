@@ -9,7 +9,7 @@ app.use(express.json());
 
 const db = mysql.createConnection({
   user: 'admin',
-  host: 'test-mysql.c2e9p78awyp5.us-east-1.rds.amazonaws.com',
+  host: 'company-mysql.c2e9p78awyp5.us-east-1.rds.amazonaws.com',
   port: 3306,
   password: 'admin_1234',
   database: 'employeedb'
