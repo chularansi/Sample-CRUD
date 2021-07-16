@@ -8,20 +8,12 @@ app.use(cors());
 app.use(express.json());
 
 const db = mysql.createConnection({
-  user: 'admin',
-  host: 'company-mysql.c2e9p78awyp5.us-east-1.rds.amazonaws.com',
+  user: 'root',
+  host: 'localhost',
   port: 3306,
-  password: 'admin_1234',
+  password: '',
   database: 'employeedb'
 });
-
-// const db = mysql.createConnection({
-//   user: 'root',
-//   host: 'localhost',
-//   port: 3306,
-//   password: '',
-//   database: 'employeedb'
-// });
 
 // Serve static files
 app.use(express.static(path.join(__dirname, 'client', 'build')));
